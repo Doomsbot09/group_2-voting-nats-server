@@ -1,0 +1,8 @@
+services:
+  nats:
+    image: nats-custom
+    container_name: voting-nats-server
+    ports:
+      - "4222:4222"
+      - "9222:9222"
+    command: ["-c", "/nats/nats.conf"]
